@@ -16,13 +16,17 @@
         </template>
         <!-- Paso 1 -->
         <template v-if="step === 1">
-          <h1>Quiero que sepas.</h1>
-          <button @click="validateButtonEvent">¿Que?</button>
+          <div class="container-info">
+            <h1>Quiero que sepas.</h1>
+            <button @click="validateButtonEvent">¿Que?</button>
+          </div>
         </template>
         <!-- Paso 2 -->
         <template v-if="step === 2">
-          <h1>Despertastes un deseo en mi, hacia ti.</h1>
-          <button @click="validateButtonEvent">¿Enserio?</button>
+          <div class="container-info">
+            <h1>Despertastes un deseo en mi, hacia ti.</h1>
+            <button @click="validateButtonEvent">¿Enserio?</button>
+          </div>
         </template>
         <!-- Paso 3 -->
         <template v-if="step === 3">
@@ -30,8 +34,10 @@
         </template>
         <!-- Paso 4 -->
         <template v-if="step === 4">
-          <h1>Te extraño mucho.</h1>
-          <button @click="validateButtonEvent">¿Yo tambien?</button>
+          <div class="container-info">
+            <h1>Te extraño mucho.</h1>
+            <button @click="validateButtonEvent">¿Yo tambien?</button>
+          </div>
         </template>
         <!-- Paso 5 -->
         <template v-if="step === 5">
