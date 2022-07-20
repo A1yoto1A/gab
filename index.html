@@ -4,38 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0px;
-      }
-    </style>
+    <title>Gab</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div id="app">
       <div class="container">
-        <h1 v-text="title" />
+        <!-- Paso 0 -->
+        <template v-if="step === 0">
+          <h1>Hola gabi</h1>
+        </template>
+        <!-- Paso 1 -->
+        <template v-if="step === 1">
+          <h1>Quiero que sepas.</h1>
+          <button @click="validateButtonEvent">¿Que?</button>
+        </template>
+        <!-- Paso 2 -->
+        <template v-if="step === 2">
+          <h1>Despertastes un deseo en mi, hacia ti.</h1>
+          <button @click="validateButtonEvent">¿Enserio?</button>
+        </template>
+        <!-- Paso 3 -->
+        <template v-if="step === 3">
+          <h1>Nunca te olvidare</h1>
+        </template>
+        <!-- Paso 4 -->
+        <template v-if="step === 4">
+          <h1>Te extraño mucho.</h1>
+          <button @click="validateButtonEvent">¿Yo tambien?</button>
+        </template>
+        <!-- Paso 5 -->
+        <template v-if="step === 5">
+          <h1>Espero verte pronto.</h1>
+        </template>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <script>
-      const app = new Vue({
-        el: "#app",
-        data() {
-          return {
-            title: "Hola gabi",
-          };
-        },
-      });
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
