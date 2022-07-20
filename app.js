@@ -12,7 +12,7 @@ const app = new Vue({
     startCount() {
       setTimeout(() => {
         this.step++;
-      }, 4000);
+      }, 3000);
     },
     validateButtonEvent() {
       this.step++;
